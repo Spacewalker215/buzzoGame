@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-container">
+            <p id="text">Welcome to Buzzo, a certamen bot which will develope your skills. To get started please click the gear and select the difficulty of the questions.</p>
+        </div>
+
+        <div class="answerfield">
+            <p class="questionInfo" style="display: none;">Press space to input your response</p>
+            <p class="answerInfo" style="display: none;">Press space to go to the next question</p>
+            <p class="correctness" style="display: none;">Congrats you got 18 correct out of 500!</p>
+            <p class="percent" style="display: none;">Which is a 3%. Vale 👋</p>
+            <p class="response-label" style="display: none;">Response:</p>
+            <input type="text" placeholder="Your response here" name="answer" style="display: none;" disabled="false">
+        </div>
+
+        <!-- New settings container -->
+        <div class="settings-container">
+            <div class="settings-rectangle">
+                <p id="credits"></p>
+                <input type="image" src="mute.png" id="soundManagement" onclick="soundControl()">
+                <div id="bgColorPicker">
+                    <p>Pick a color for the background color: </p> 
+                </div>
+                <input type="color" class="colorPicker">
+
+                <div id="difficultySelector">
+                    <label>Difficulty: </label>
+                    <select name="difficulty" id="difficulty">
+                        <option></option>
+                        <option value="Novice">Novice</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                
+                    <div id="difficultyValue" style="display: none;">gggg</div>
+                </div>
+                
+                <input type="image" src="credit.png" id="credit" onclick="credits()">
+                
+                <!-- <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a> add this for credit-->
+            </div>
+            <p style="opacity: 0;">This is the second round rectangle</p>
+        </div>
+
+        <input type="image" src="settings.png" id="settings" onclick="settings()">
+        <button class="finish" onclick="finishGame()">Done Playing</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <!-- Reading excell sheets -->
+    <script src="https://cdn.jsdelivr.net/npm/string-similarity/umd/string-similarity.min.js"></script> <!-- CHecking similarity -->
+
+</body>
+
+</html>
+
+
+<!-- https://www.flaticon.com/free-icon/mute_561106?term=mute&page=1&position=6&origin=search&related_id=561106 mute button -->
+
+<!-- https://www.flaticon.com/free-icon/volume_608417?term=sound&page=1&position=8&origin=search&related_id=608417 volume -->

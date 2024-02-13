@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Defult setup of the box aka background*/
+.container {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+/* Settings for */
+.text-container {
+    font-size: 24px;
+    max-width: 90%;
+    word-wrap: break-word;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text-container span {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.word {
+    display: inline-block;
+}
+
+.text-container .word.highlight {
+    background-color: #ffcc00;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.answerfield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.response-label {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.answerfield input {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.percent,
+.correctness {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.finish {
+    position: absolute;
+    bottom: 25px;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: lightcoral;
+}
+
+#settings {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.settings-container {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+.settings-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.settings-rectangle {
+    width: 150%;
+    height: 495%;
+    background-color: #FFF;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.spin {
+    animation: spin 1s ease-in-out;
+}
+
+.pop-in {
+    animation: popIn 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#soundManagement {
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    top: 30px;
+    left: 10px;
+}
+
+#credit{
+    position: absolute;
+    height: 25px;
+    top: 200px;
+    left: 195px;
+}
+
+#difficultySelector{
+    position: absolute;
+    font-size: medium;
+    font-weight: bold;
+    top: 150px;
+    left: 10px;
+}
+
+#bgColorPicker{
+    position: absolute;
+    height: 50px;
+    font-size: medium;
+    font-weight: bolder;
+    top: 90px;
+    left: 10px;
+}
+
+.colorPicker{
+    position: absolute;
+    top:100px;
+    left: 275px;
+}
