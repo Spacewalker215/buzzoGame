@@ -67,7 +67,6 @@ if('speechSynthesis' in window){
                 questions.push(questionCell.v.toString().trim());
                 answers.push(answerCell.v.toString().trim());
             }
-    
             return { questions, answers };
         }
 
